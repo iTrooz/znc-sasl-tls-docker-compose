@@ -1,0 +1,13 @@
+services:
+  znc:
+    image: znc:latest
+    ports:
+      - "6697:6697"
+    volumes:
+      - znc-data:/znc-data
+      - ./znc.conf:/znc-data/configs/znc.conf
+      - /etc/letsencrypt:/etc/letsencrypt:ro
+      - ./handle_certs.sh:/startup-sequence/19-handle_certs.sh:ro
+
+volumes:
+  znc-data:

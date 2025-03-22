@@ -1,0 +1,27 @@
+Version = 1.9.1
+<Listener l>
+        Port = 6697
+        IPv4 = true
+        IPv6 = false
+        SSL = true
+</Listener>
+LoadModule = corecaps
+LoadModule = webadmin
+
+<User itrooz>
+<Pass password>
+        Method = Argon2id
+        Hash = $argon2id$v=19$m=6144,t=6,p=1$bU1tKFdRLDdFSEROTzo1Q3hLb1Q$kqkoe1/HYuQsO47MCjeOhpeAQKY6rs9LBlmlJ7wK/cU
+</Pass>
+        Admin      = true
+        Nick       = itrooz
+        AltNick    = itrooz_
+        Ident      = itrooz
+        LoadModule = chansaver
+        LoadModule = controlpanel
+
+        <Network libera>
+                LoadModule = simple_away
+                Server     = irc.libera.chat +6697 
+        </Network>
+</User>
