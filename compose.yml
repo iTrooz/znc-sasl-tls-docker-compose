@@ -2,7 +2,7 @@ services:
   znc:
     image: znc:latest
     ports:
-      - "6697:6697"
+      - "6698:6698"
     volumes:
       - znc-data:/znc-data
       - ./znc.conf:/znc-data/configs/znc.conf
