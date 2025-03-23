@@ -3,7 +3,7 @@ Tutorial/configs to deploy a private ZNC instance on your server.
 # Usage
 Note: I'm not sure these steps are actually accurate, I don't remember exactly what I did to get it working :)
 - Generate a custom config using `docker run -it -v ./configs:/znc-data/configs znc --makeconf`
-You can then retrieve the config at `./configs/znc.conf` and move it to the root of this repository. A sample is provided [here](./znc.conf.sample)
+You can then retrieve the config at `./configs/znc.conf` and move it to `./configs` in this repository. A sample is provided [here](./znc.conf.sample)
 - Add the following lines at the root of the file:
 ```conf
 SSLCertFile = /etc/letsencrypt-fixed/live/<your website>/fullchain.pem
