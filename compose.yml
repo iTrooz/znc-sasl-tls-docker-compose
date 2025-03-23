@@ -8,6 +8,7 @@ services:
       - ./znc.conf:/znc-data/configs/znc.conf
       - /etc/letsencrypt:/etc/letsencrypt:ro
       - ./handle_certs.sh:/startup-sequence/19-handle_certs.sh:ro
+    restart: unless-stopped
 
 volumes:
   znc-data:
